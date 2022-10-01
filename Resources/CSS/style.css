@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    max-height: 20%;
 }
 #Header{
     margin-top: 1%;

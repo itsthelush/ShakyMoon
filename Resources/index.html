@@ -12,6 +12,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+	<script src="https://unpkg.com/three"></script>
+	<script src="https://unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
+	<script src="https://unpkg.com/three-globe"></script>
+
   </head>
   <body>
 
@@ -42,7 +46,44 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10" id="ContentPlayer">
-			<img alt="Content Player" src="Images/TeamLogo.jpeg">
+			<div id="globeViz"></div>
+
+			<script>
+
+				const Globe = new ThreeGlobe()
+				.globeImageUrl('https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg');
+
+				// Setup renderer
+				const renderer = new THREE.WebGLRenderer();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.getElementById('globeViz').appendChild(renderer.domElement);
+
+				// Setup scene
+				const scene = new THREE.Scene();
+				scene.add(Globe);
+				scene.add(new THREE.AmbientLight(0xbbbbbb));
+				scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
+
+				// Setup camera
+				const camera = new THREE.PerspectiveCamera();
+				camera.aspect = window.innerWidth/window.innerHeight;
+				camera.updateProjectionMatrix();
+				camera.position.z = 500;
+
+				// Add camera controls
+				const tbControls = new THREE.TrackballControls(camera, renderer.domElement);
+				tbControls.minDistance = 101;
+				tbControls.rotateSpeed = 5;
+				tbControls.zoomSpeed = 0.8;
+
+				// Kick-off renderer
+				(function animate() { // IIFE
+				// Frame cycle
+				tbControls.update();
+				renderer.render(scene, camera);
+				requestAnimationFrame(animate);
+				})();
+			</script>
 		</div>
 		<div class="col-md-1">
 		</div>

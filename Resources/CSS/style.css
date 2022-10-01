@@ -21,7 +21,6 @@ body{
 
 #Description{
     margin-top: 1%;
-    /* background-color:blue; */
 }
 
 #Description h3{
@@ -30,7 +29,6 @@ body{
 
 #Content{
     margin-top: 1%;
-    /* background-color: purple; */
     height: 150%;
 }
 
@@ -42,7 +40,6 @@ body{
 
 #Footer{
     margin-top: 1%;
-    /* background-color: green; */
 }
 
 #TeamInfo{

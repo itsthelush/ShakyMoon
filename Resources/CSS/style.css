@@ -1,3 +1,7 @@
+body{
+    background-image: url('https://unpkg.com/three-globe/example/img/night-sky.png');
+}
+
 #Header{
     margin-top: 1%;
 }
@@ -5,8 +9,90 @@
 #TeamLogo{
     margin-top: 1%;
     margin-left: 1%;
-    width: 13%;
+    width: 75%;
+    height: 75%;
     border-radius: 15%;
+}
+
+#TeamLogoDIV{
+    max-width: 20%;
+    max-height: 20%;
+}
+
+.TeamLogo{
+    opacity: 1;
+    display: block;
+    transition: 3s ease;
+    backface-visibility: hidden;
+}
+
+.middle{
+    transition: 3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#TeamLogoDIV:hover .TeamLogo{
+    opacity: 0.3;
+}
+
+#TeamLogoDIV:hover + #OptionsMenu{
+    display: block;
+}
+
+#OptionsMenu:hover{
+    display: block;
+}
+
+#OptionsMenu{
+    display: none;
+    background-color: rgb(20, 20, 20);
+    max-width: 13%;
+    margin-left: 1%;
+    color: white;
+}
+
+.ItemLista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 3%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+#MeteoritoDIV{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(145, 142, 142);
+}
+
+#ImpactoArtificialDIV{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(145, 142, 142);
+}
+
+#ImpactoRasoDIV{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(145, 142, 142);
+}
+
+#ImpactoProfundoDIV{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(145, 142, 142);
+}
+
+.ItemLista:hover{
+    color:lightskyblue;
+    font-weight: 600;
 }
 
 #Content{
@@ -21,6 +107,8 @@
 
 #globeViz{
     margin-right: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 .Background{

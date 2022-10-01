@@ -3,72 +3,59 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="The Shaky Side of the Moon">
 
+	<!-- Page info -->
     <title>Moon map</title>
+	<link rel="icon" href="Images/TeamLogo.png">
 
-    <meta name="author" content="The Shaky Side of the Moon">
-
+	<!-- Calling the style sheet -->
     <link href="css/style.css" rel="stylesheet">
 
+	<!-- Scripts to construct the player -->
 	<script src="https://unpkg.com/three"></script>
 	<script src="https://unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
 	<script src="https://unpkg.com/three-globe"></script>
+	
 
   </head>
+
   <body>
 
+	<!-- Header start -->
 	<div id="Header">
+
+		<!-- Div with team logo image and link to team web page -->
 		<div id="TeamLogoDIV">
-            <a href="https://2022.spaceappschallenge.org/challenges/2022-challenges/moonquake-map/teams/the-shaky-side-of-the-moon/members">
-			    <img alt="TeamLogo" id="TeamLogo" src="Images/TeamLogo.jpeg">
+			<a href="https://2022.spaceappschallenge.org/challenges/2022-challenges/moonquake-map/teams/the-shaky-side-of-the-moon/members">
+			    <img alt="TeamLogo" id="TeamLogo" class="TeamLogo" src="Images/TeamLogo.jpeg"></img>
             </a>
 		</div>
 
+		<!-- Option menu - list -->
+		<div id="OptionsMenu">
+				<div id="MeteoritoDIV">
+					<a class="ItemLista" id="Meteorito">Meteorito</a>
+				</div>
+				<div id="ImpactoArtificialDIV">
+					<a class="ItemLista" id="ImpactoArtificial">Impacto Artificial</a>
+				</div>
+				<div id="ImpactoRasoDIV">
+					<a class="ItemLista" id="ImpactoRaso">Impacto Raso</a>
+				</div>
+				<div id="ImpactoProfundoDIV">
+					<a class="ItemLista" id="ImpactoProfundo">Impacto Profundo</a>
+				</div>
+		</div>
 	</div>
 
+	<!-- Divs with content player and script for run the moon player -->
 	<div id="Content">
 		<div id="ContentPlayer">
 			<div id="globeViz" class="Background"></div>
-
-			<script>
-
-				const Globe = new ThreeGlobe()
-				.globeImageUrl('https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg');
-
-				// Setup renderer
-				const renderer = new THREE.WebGLRenderer();
-				renderer.setSize(window.innerWidth, window.innerHeight);
-				document.getElementById('globeViz').appendChild(renderer.domElement);
-
-				// Setup scene
-				const scene = new THREE.Scene();
-				scene.add(Globe);
-				scene.add(new THREE.AmbientLight(0xbbbbbb));
-				scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
-
-				// Setup camera
-				const camera = new THREE.PerspectiveCamera();
-				camera.aspect = window.innerWidth/window.innerHeight;
-				camera.updateProjectionMatrix();
-				camera.position.z = 500;
-
-				// Add camera controls
-				const tbControls = new THREE.TrackballControls(camera, renderer.domElement);
-				tbControls.minDistance = 101;
-				tbControls.rotateSpeed = 5;
-				tbControls.zoomSpeed = 0.8;
-
-				// Kick-off renderer
-				(function animate() { // IIFE
-				// Frame cycle
-				tbControls.update();
-				renderer.render(scene, camera);
-				requestAnimationFrame(animate);
-				})();
-			</script>
+			<script src="JS\scripts.js"></script>
+			<script src="JS/timerLogo.js"></script>
 		</div>
 	</div>
-</div>
-  </body>
+</body>
 </html>

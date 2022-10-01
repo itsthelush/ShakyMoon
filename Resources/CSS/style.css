@@ -1,22 +1,15 @@
-body{
-    background-image: url("../Images/starsSky.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    max-height: 20%;
-}
 #Header{
     margin-top: 1%;
 }
 
-#TeamLogoDIV{
+/*#TeamLogoDIV{
     margin: 1%;
-}
+}*/
 
 #TeamLogo{
-    width: 80%;
-    height: 100%;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 13%;
     border-radius: 15%;
 }
 
@@ -34,9 +27,19 @@ body{
 }
 
 #ContentPlayer{
-    margin: 1%;
     display: flex;
     justify-content: center;
+}
+
+#globeViz{
+    margin-right: 2%;
+}
+
+.Background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
 }
 
 #Footer{
@@ -51,3 +54,4 @@ body{
     display: flex;
     justify-content: center;
 }
+

@@ -9,7 +9,6 @@
 
     <meta name="author" content="The Shaky Side of the Moon">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 	<script src="https://unpkg.com/three"></script>
@@ -19,34 +18,18 @@
   </head>
   <body>
 
-    <div class="container-fluid">
-	<div class="row" id="Header">
-		<div class="col-md-2" id="TeamLogoDIV">
+	<div id="Header">
+		<div id="TeamLogoDIV">
             <a href="https://2022.spaceappschallenge.org/challenges/2022-challenges/moonquake-map/teams/the-shaky-side-of-the-moon/members">
 			    <img alt="TeamLogo" id="TeamLogo" src="Images/TeamLogo.jpeg">
             </a>
 		</div>
-		<div class="col-md-5">
-		</div>
-		<div class="col-md-5">
-		</div>
+
 	</div>
-	<div class="row" id="Description">
-		<div class="col-md-3">
-		</div>
-		<div class="col-md-6">
-			<h3>
-				Esse projeto tem como objetivo apresentar a atividade sísmica na Lua.
-			</h3>
-		</div>
-		<div class="col-md-3">
-		</div>
-	</div>
-	<div class="row" id="Content">
-		<div class="col-md-1">
-		</div>
-		<div class="col-md-10" id="ContentPlayer">
-			<div id="globeViz"></div>
+
+	<div id="Content">
+		<div id="ContentPlayer">
+			<div id="globeViz" class="Background"></div>
 
 			<script>
 
@@ -85,26 +68,7 @@
 				})();
 			</script>
 		</div>
-		<div class="col-md-1">
-		</div>
-	</div>
-	<div class="row" id="Footer">
-		<div class="col-md-3">
-		</div>
-		<div class="col-md-5">
-		</div>
-		<div class="col-md-4" id="TeamInfo">
-			<p>
-				Sobre o time: Somos uma equipe de três programadores:
-                <br> Letícia, Paulo e Reginaldo.<br>
-                The Shaky Side of the Moon!
-            </p>
-		</div>
 	</div>
 </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,55 @@
+body{
+    background-image: url("../Images/starsSky.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#Header{
+    margin-top: 1%;
+}
+
+#TeamLogoDIV{
+    margin: 1%;
+}
+
+#TeamLogo{
+    width: 80%;
+    height: 100%;
+    border-radius: 15%;
+}
+
+#Description{
+    margin-top: 1%;
+    /* background-color:blue; */
+}
+
+#Description h3{
+    color: rgb(170, 170, 170);
+}
+
+#Content{
+    margin-top: 1%;
+    /* background-color: purple; */
+    height: 150%;
+}
+
+#ContentPlayer{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+#Footer{
+    margin-top: 1%;
+    /* background-color: green; */
+}
+
+#TeamInfo{
+    color: white;
+}
+#Footer p{
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+}

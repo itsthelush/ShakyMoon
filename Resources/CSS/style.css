@@ -2,23 +2,11 @@
     margin-top: 1%;
 }
 
-/*#TeamLogoDIV{
-    margin: 1%;
-}*/
-
 #TeamLogo{
     margin-top: 1%;
     margin-left: 1%;
     width: 13%;
     border-radius: 15%;
-}
-
-#Description{
-    margin-top: 1%;
-}
-
-#Description h3{
-    color: rgb(170, 170, 170);
 }
 
 #Content{
@@ -41,17 +29,3 @@
     left: 0;
     z-index: -100;
 }
-
-#Footer{
-    margin-top: 1%;
-}
-
-#TeamInfo{
-    color: white;
-}
-#Footer p{
-    margin: 2%;
-    display: flex;
-    justify-content: center;
-}
-

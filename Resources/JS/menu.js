@@ -1,16 +1,30 @@
 /*var dados = JSON.parse(testejson.json);*/
 /*import json from 'JS/testejson.json';*/
 
-fetch("testjson.json")
-  .then(response => response.json())
-  .then(json => console.log(json));
+/*function data(object){
+    fetch("https://raw.githubusercontent.com/itsthelush/ShakyMoon/main/Resources/JS/testejson.json")
+    .then(response => response.json())
+    .then(json => printIt(json));
+}
 
+function consulta(par){
+    console.info(data(par));
+}
+
+let printIt = (json) => {
+    console.info(typeof json)
+}*/
+
+
+
+import dados from './testejson.json' assert { type: 'JSON' };
 
 const element = document.querySelector('.Meteorito');
 
 function Meteorito(){
     console.log("Meteorito Clicado");
-    console.log(json, 'the json obj');
+    console.log(dados);
+    
 }
 function ImpactoArtificial(){
     console.log("ImpactoArtificial Clicado");

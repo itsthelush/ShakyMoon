@@ -9,6 +9,7 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
   }
   
+  sleep(3000);
   while (0==0){
     element.style.opacity='1.0';
     sleep(3000);

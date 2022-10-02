@@ -1,18 +1,18 @@
 const element = document.querySelector('.TeamLogo');
 
 
-function sleep(milliseconds) {
+/*function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
     do {
       currentDate = Date.now();
     } while (currentDate - date < milliseconds);
   }
-  
-  sleep(3000);
+
+  window.onload = sleep(3000);
   while (0==0){
     element.style.opacity='1.0';
     sleep(3000);
     element.style.opacity='0.7';
     sleep(2000);
-  }
+  }*/

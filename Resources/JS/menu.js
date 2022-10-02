@@ -17,15 +17,15 @@ let printIt = (json) => {
 
 
 
-import dados from './testejson.json' assert { type: 'JSON' };
+import dados from 'raw.githubusercontent.com/itsthelush/ShakyMoon/main/Resources/JS/testejson.json' assert { type: 'JSON' };
 
-const element = document.querySelector('.Meteorito');
 
 function Meteorito(){
     console.log("Meteorito Clicado");
     console.log(dados);
     
 }
+
 function ImpactoArtificial(){
     console.log("ImpactoArtificial Clicado");
 }
